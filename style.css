@@ -18,3 +18,16 @@ section {
     max-width: 800px;
     border-radius: 10px;
 }
+
+/* Personal Information */
+.personal-info {
+    background-color: #E6D6FF;
+}
+
+h2 {
+    color: #6A4C93;
+}
+
+li {
+    margin: 8px;
+}
