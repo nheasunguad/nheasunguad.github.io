@@ -19,8 +19,12 @@ section {
     border-radius: 10px;
 }
 
-/* Personal Information */
-.personal-info {
+/* Personal Information, About Me, Goals, Skills, and Hobbies */
+.personal-info,
+.about-me,
+.goals,
+.skills,
+.hobbies {
     background-color: #E6D6FF;
 }
 
