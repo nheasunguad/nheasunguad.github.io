@@ -5,7 +5,11 @@ body {
     margin: 0;
 }
 
-/* Welcome Page */
+
+/* =========================
+   WELCOME PAGE
+   ========================= */
+
 .welcome {
     min-height: 100vh;
     display: flex;
@@ -15,15 +19,27 @@ body {
     background-color: #E6D6FF;
     padding: 30px;
     box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
 }
 
+
+/* Welcome Box */
+
 .welcome-content {
-    background-color: #F5EEFF;
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 60px 40px;
     border-radius: 25px;
     max-width: 700px;
+    position: relative;
+    z-index: 2;
     box-shadow: 0 5px 20px rgba(106, 76, 147, 0.2);
+
+    animation: appear 2s ease;
 }
+
+
+/* Welcome Title */
 
 .welcome h1 {
     font-size: 70px;
@@ -49,6 +65,9 @@ body {
     color: #8E6BBE;
 }
 
+
+/* Enter Button */
+
 .enter-button {
     display: inline-block;
     margin-top: 25px;
@@ -58,14 +77,126 @@ body {
     text-decoration: none;
     border-radius: 25px;
     font-size: 16px;
+
+    transition: 0.3s;
 }
 
 .enter-button:hover {
     background-color: #6A4C93;
+    transform: scale(1.08);
 }
 
 
-/* Header */
+/* =========================
+   MOVING FLOWERS
+   ========================= */
+
+.flowers span {
+    position: absolute;
+    font-size: 35px;
+    z-index: 1;
+
+    animation: float 6s infinite ease-in-out;
+}
+
+
+/* Flower Positions */
+
+.flowers span:nth-child(1) {
+    left: 8%;
+    top: 15%;
+    animation-delay: 0s;
+}
+
+.flowers span:nth-child(2) {
+    left: 20%;
+    top: 70%;
+    animation-delay: 1s;
+}
+
+.flowers span:nth-child(3) {
+    left: 85%;
+    top: 15%;
+    animation-delay: 2s;
+}
+
+.flowers span:nth-child(4) {
+    left: 90%;
+    top: 70%;
+    animation-delay: 3s;
+}
+
+.flowers span:nth-child(5) {
+    left: 12%;
+    top: 85%;
+    animation-delay: 4s;
+}
+
+.flowers span:nth-child(6) {
+    left: 80%;
+    top: 85%;
+    animation-delay: 5s;
+}
+
+.flowers span:nth-child(7) {
+    left: 50%;
+    top: 8%;
+    animation-delay: 1.5s;
+}
+
+.flowers span:nth-child(8) {
+    left: 50%;
+    top: 90%;
+    animation-delay: 3.5s;
+}
+
+
+/* Flower Floating Animation */
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-25px) rotate(10deg);
+    }
+
+    50% {
+        transform: translateY(-50px) rotate(-10deg);
+    }
+
+    75% {
+        transform: translateY(-25px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+
+/* Welcome Text Animation */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
 header {
     text-align: center;
     padding: 50px;
@@ -74,7 +205,10 @@ header {
 }
 
 
-/* Sections */
+/* =========================
+   SECTIONS
+   ========================= */
+
 section {
     background-color: lavender;
     margin: 20px auto;
@@ -85,6 +219,7 @@ section {
 
 
 /* Personal Information, About Me, Goals, Skills, and Hobbies */
+
 .personal-info,
 .about-me,
 .goals,
@@ -94,10 +229,26 @@ section {
 }
 
 
+/* Headings */
+
 h2 {
     color: #6A4C93;
 }
 
+
+/* Lists */
+
 li {
     margin: 8px;
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: lavender;
 }
