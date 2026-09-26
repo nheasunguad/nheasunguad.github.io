@@ -81,26 +81,32 @@ header {
 }
 
 header img {
-    width: 130px;
-    height: 130px;
+    width: 130px !important;
+    height: 130px !important;
+    max-width: 130px !important;
+    max-height: 130px !important;
+
     object-fit: cover;
+
     border-radius: 50%;
+
     border: 5px solid white;
-    box-shadow: 0 5px 15px rgba(106, 76, 147, 0.20);
+
+    box-shadow:
+        0 5px 15px rgba(106, 76, 147, 0.20);
+
     margin-bottom: 15px;
 }
 
 header h1 {
     font-size: 45px;
     color: #4B3869;
-
     margin-bottom: 5px;
 }
 
 header > p {
     font-size: 20px;
     color: #6A4C93;
-
     margin: 8px 0;
 }
 
@@ -147,7 +153,9 @@ section:hover {
 }
 
 
-/* Personal Information, About Me, Goals, Skills, Hobbies */
+/* =========================
+   SECTION COLORS
+========================= */
 
 .personal-info,
 .about-me,
@@ -157,15 +165,9 @@ section:hover {
     background-color: #E6D6FF;
 }
 
-
-/* Projects */
-
 .projects {
     background-color: #EDE2FA;
 }
-
-
-/* Contact */
 
 .contact {
     background-color: #E6D6FF;
@@ -247,6 +249,16 @@ ul {
 
     box-shadow:
         0 8px 20px rgba(106, 76, 147, 0.15);
+}
+
+.card h3 {
+    color: #704D91;
+
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #5D5065;
 }
 
 
@@ -346,8 +358,10 @@ footer {
     }
 
     header img {
-        width: 160px;
-        height: 160px;
+        width: 130px !important;
+        height: 130px !important;
+        max-width: 130px !important;
+        max-height: 130px !important;
     }
 
     header h1 {
