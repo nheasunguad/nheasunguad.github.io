@@ -1,25 +1,160 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
-    background-color: lavender;
+    background-color: #f8f1ff;
     color: #333;
+    line-height: 1.6;
 }
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    background-color: white;
+
+    box-shadow: 0 3px 15px rgba(106, 76, 147, 0.15);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #6A4C93;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6A4C93;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #A477C2;
+}
+
+
+/* =========================
+   HEADER / HOME
+========================= */
 
 header {
     text-align: center;
-    padding: 50px;
-    background-color: lavender;
+    padding: 80px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #E6D6FF,
+        #F5ECFF
+    );
+
     color: #333;
 }
 
-section {
-    background-color: lavender;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    border-radius: 10px;
+header img {
+    width: 200px;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 6px solid white;
+
+    box-shadow:
+        0 8px 25px rgba(106, 76, 147, 0.25);
+
+    margin-bottom: 20px;
 }
 
-/* Personal Information, About Me, Goals, Skills, and Hobbies */
+header h1 {
+    font-size: 45px;
+    color: #4B3869;
+
+    margin-bottom: 5px;
+}
+
+header > p {
+    font-size: 20px;
+    color: #6A4C93;
+
+    margin: 8px 0;
+}
+
+header strong {
+    color: #5B3D7A;
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    padding: 30px 20px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    background-color: #E6D6FF;
+
+    margin: 30px auto;
+
+    padding: 35px;
+
+    max-width: 900px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 20px rgba(106, 76, 147, 0.12);
+
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 25px rgba(106, 76, 147, 0.18);
+}
+
+
+/* Personal Information, About Me, Goals, Skills, Hobbies */
+
 .personal-info,
 .about-me,
 .goals,
@@ -28,10 +163,214 @@ section {
     background-color: #E6D6FF;
 }
 
+
+/* Projects */
+
+.projects {
+    background-color: #EDE2FA;
+}
+
+
+/* Contact */
+
+.contact {
+    background-color: #E6D6FF;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
 h2 {
     color: #6A4C93;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #CDB4E8;
+}
+
+h3 {
+    color: #6A4C93;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+p {
+    margin-bottom: 12px;
 }
 
 li {
     margin: 8px;
+}
+
+
+/* =========================
+   LISTS
+========================= */
+
+ul {
+    padding-left: 20px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 20px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.65);
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    border: 1px solid #D5C0E8;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(106, 76, 147, 0.15);
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    color: #6A4C93;
+
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+a:hover {
+    color: #A477C2;
+
+    text-decoration: underline;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.button {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 12px 28px;
+
+    background-color: #8E6BB2;
+
+    color: white;
+
+    border-radius: 25px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #6A4C93;
+
+    color: white;
+
+    transform: translateY(-3px);
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    background-color: #D8BFE8;
+
+    color: #4B3B57;
+
+    margin-top: 40px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    nav {
+        flex-direction: column;
+
+        gap: 15px;
+
+        padding: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+
+    header {
+        padding: 60px 20px;
+    }
+
+    header img {
+        width: 160px;
+        height: 160px;
+    }
+
+    header h1 {
+        font-size: 35px;
+    }
+
+    header > p {
+        font-size: 17px;
+    }
+
+    section {
+        margin: 20px 10px;
+
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
 }
