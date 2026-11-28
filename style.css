@@ -1,4 +1,3 @@
-
 /* =========================
    GENERAL
 ========================= */
@@ -11,19 +10,17 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f1ff;
     color: #333;
-    line-height: 1.6;
-
-    /* Page fade transition */
-    animation: pageFade 1s ease-in-out;
+    line-height: 1.7;
+    animation: pageFade 0.8s ease-in-out;
 }
 
-/* Page fade animation */
 @keyframes pageFade {
     from {
         opacity: 0;
@@ -47,8 +44,7 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    padding: 18px 8%;
-
+    padding: 18px 6%;
     background-color: white;
 
     box-shadow: 0 3px 15px rgba(106, 76, 147, 0.15);
@@ -60,16 +56,21 @@ nav {
     font-size: 22px;
     font-weight: bold;
     color: #6A4C93;
+    white-space: nowrap;
 }
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 20px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #6A4C93;
+    font-size: 14px;
     font-weight: bold;
 
     transition: color 0.3s ease,
@@ -83,230 +84,69 @@ nav {
 
 
 /* =========================
-   HEADER / HOME
+   HOME SECTION
 ========================= */
 
-header {
+.home {
     text-align: center;
     padding: 80px 20px;
 
     background: linear-gradient(
         135deg,
         #E6D6FF,
-        #F5ECFF
+        #F5ECFF,
+        #EADCFB
     );
-
-    color: #333;
 
     animation: slideDown 1s ease;
 }
 
-header img {
-    width: 130px !important;
-    height: 130px !important;
-    max-width: 130px !important;
-    max-height: 130px !important;
+.home-content {
+    max-width: 750px;
+    margin: auto;
+}
 
+.profile img {
+    width: 150px;
+    height: 150px;
     object-fit: cover;
 
     border-radius: 50%;
-
     border: 5px solid white;
 
-    box-shadow:
-        0 5px 15px rgba(106, 76, 147, 0.20);
+    box-shadow: 0 5px 20px rgba(106, 76, 147, 0.2);
 
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
 
     animation: imageFade 1.2s ease;
 }
 
-header h1 {
-    font-size: 45px;
+.profile img:hover {
+    transform: scale(1.06);
+    box-shadow: 0 8px 25px rgba(106, 76, 147, 0.3);
+}
+
+.home h1 {
+    font-size: 42px;
     color: #4B3869;
     margin-bottom: 5px;
 }
 
-header > p {
-    font-size: 20px;
+.home h2 {
+    font-size: 21px;
     color: #6A4C93;
-    margin: 8px 0;
-}
-
-header strong {
-    color: #5B3D7A;
-}
-
-
-/* =========================
-   MAIN
-========================= */
-
-main {
-    padding: 30px 20px;
-}
-
-
-/* =========================
-   SECTIONS
-========================= */
-
-section {
-    background-color: #E6D6FF;
-
-    margin: 30px auto;
-
-    padding: 35px;
-
-    max-width: 900px;
-
-    border-radius: 20px;
-
-    box-shadow:
-        0 5px 20px rgba(106, 76, 147, 0.12);
-
-    transition: transform 0.4s ease,
-                box-shadow 0.4s ease;
-
-    animation: slideUp 0.9s ease both;
-}
-
-section:hover {
-    transform: translateY(-5px);
-
-    box-shadow:
-        0 8px 25px rgba(106, 76, 147, 0.18);
-}
-
-
-/* =========================
-   SECTION COLORS
-========================= */
-
-.personal-info,
-.about-me,
-.goals,
-.skills,
-.hobbies {
-    background-color: #E6D6FF;
-}
-
-.projects {
-    background-color: #EDE2FA;
-}
-
-.contact {
-    background-color: #E6D6FF;
-}
-
-
-/* =========================
-   HEADINGS
-========================= */
-
-h2 {
-    color: #6A4C93;
-
-    font-size: 28px;
-
-    margin-bottom: 20px;
-
-    padding-bottom: 10px;
-
-    border-bottom: 2px solid #CDB4E8;
-}
-
-h3 {
-    color: #6A4C93;
-
+    border: none;
     margin-bottom: 10px;
 }
 
-
-/* =========================
-   TEXT
-========================= */
-
-p {
-    margin-bottom: 12px;
-}
-
-li {
-    margin: 8px;
-}
-
-
-/* =========================
-   LISTS
-========================= */
-
-ul {
-    padding-left: 20px;
-}
-
-
-/* =========================
-   CARDS
-========================= */
-
-.cards {
-    display: grid;
-
-    grid-template-columns:
-        repeat(auto-fit, minmax(220px, 1fr));
-
-    gap: 20px;
-}
-
-.card {
-    background-color: rgba(255, 255, 255, 0.65);
-
-    padding: 25px;
-
-    border-radius: 15px;
-
-    border: 1px solid #D5C0E8;
-
-    transition: transform 0.4s ease,
-                box-shadow 0.4s ease;
-}
-
-.card:hover {
-    transform: translateY(-7px);
-
-    box-shadow:
-        0 8px 20px rgba(106, 76, 147, 0.15);
-}
-
-.card h3 {
-    color: #704D91;
-
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: #5D5065;
-}
-
-
-/* =========================
-   LINKS
-========================= */
-
-a {
-    color: #6A4C93;
-
-    font-weight: bold;
-
-    text-decoration: none;
-
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #A477C2;
-
-    text-decoration: underline;
+.motto {
+    font-size: 17px;
+    font-style: italic;
+    color: #70558D;
+    margin: 15px 0;
 }
 
 
@@ -317,29 +157,256 @@ a:hover {
 .button {
     display: inline-block;
 
-    margin-top: 20px;
-
+    margin-top: 15px;
     padding: 12px 28px;
 
     background-color: #8E6BB2;
-
     color: white;
 
     border-radius: 25px;
-
     text-decoration: none;
 
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease,
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
 }
 
 .button:hover {
     background-color: #6A4C93;
-
     color: white;
 
-    transform: translateY(-4px) scale(1.03);
+    transform: translateY(-4px);
 
-    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(106, 76, 147, 0.25);
+}
+
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    padding: 25px 20px;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    max-width: 950px;
+    margin: 35px auto;
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(106, 76, 147, 0.12);
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease;
+
+    animation: slideUp 0.8s ease both;
+}
+
+section:hover {
+    box-shadow: 0 9px 25px rgba(106, 76, 147, 0.18);
+}
+
+.personal-info,
+.education,
+.about-me,
+.skills,
+.strengths,
+.learning,
+.goals,
+.hobbies,
+.projects,
+.contact {
+    background-color: #E6D6FF;
+}
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+section h2 {
+    color: #6A4C93;
+    font-size: 28px;
+
+    margin-bottom: 22px;
+    padding-bottom: 10px;
+
+    border-bottom: 2px solid #CDB4E8;
+}
+
+h3 {
+    color: #6A4C93;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+p {
+    margin-bottom: 12px;
+    color: #51465B;
+}
+
+.about-me p,
+.learning p,
+.hobbies p {
+    line-height: 1.9;
+}
+
+
+/* =========================
+   PERSONAL INFORMATION
+========================= */
+
+.info-list {
+    background-color: rgba(255, 255, 255, 0.55);
+
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.info-list p {
+    padding: 8px 0;
+    border-bottom: 1px solid #D8C4EC;
+}
+
+.info-list p:last-child {
+    border-bottom: none;
+}
+
+.info-list strong {
+    color: #6A4C93;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+    );
+
+    gap: 22px;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.7);
+
+    padding: 25px;
+    border-radius: 15px;
+
+    border: 1px solid #D5C0E8;
+
+    box-shadow: 0 3px 10px rgba(106, 76, 147, 0.06);
+
+    transition: transform 0.35s ease,
+                box-shadow 0.35s ease,
+                background-color 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    background-color: white;
+
+    box-shadow: 0 9px 22px rgba(106, 76, 147, 0.17);
+}
+
+.card h3 {
+    color: #704D91;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #5D5065;
+    font-size: 15px;
+}
+
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education .card,
+.skills .card,
+.strengths .card,
+.goals .card {
+    min-height: 150px;
+}
+
+
+/* =========================
+   ABOUT ME AND LEARNING
+========================= */
+
+.about-me p,
+.learning p {
+    text-align: justify;
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects .card {
+    border-top: 4px solid #A477C2;
+}
+
+.projects .card h3 {
+    font-size: 18px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact p {
+    margin: 15px 0;
+    padding: 12px;
+
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+.contact strong {
+    color: #6A4C93;
+}
+
+.contact a {
+    color: #704D91;
+    font-weight: bold;
+
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #A477C2;
+    text-decoration: underline;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    transition: color 0.3s ease;
 }
 
 
@@ -351,14 +418,15 @@ footer {
     text-align: center;
 
     padding: 25px;
-
     background-color: #D8BFE8;
 
     color: #4B3B57;
-
     margin-top: 40px;
+}
 
-    animation: pageFade 1.2s ease;
+footer p {
+    margin: 0;
+    color: #4B3B57;
 }
 
 
@@ -366,11 +434,10 @@ footer {
    ANIMATIONS
 ========================= */
 
-/* Slide down animation */
 @keyframes slideDown {
     from {
         opacity: 0;
-        transform: translateY(-30px);
+        transform: translateY(-20px);
     }
 
     to {
@@ -379,11 +446,10 @@ footer {
     }
 }
 
-/* Slide up animation */
 @keyframes slideUp {
     from {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(25px);
     }
 
     to {
@@ -392,11 +458,10 @@ footer {
     }
 }
 
-/* Image fade animation */
 @keyframes imageFade {
     from {
         opacity: 0;
-        transform: scale(0.8);
+        transform: scale(0.85);
     }
 
     to {
@@ -407,68 +472,134 @@ footer {
 
 
 /* =========================
-   MOBILE
+   RESPONSIVE DESIGN
+   TABLETS
 ========================= */
 
-@media (max-width: 700px) {
+@media screen and (max-width: 900px) {
 
     nav {
         flex-direction: column;
-
         gap: 15px;
-
-        padding: 15px;
+        padding: 18px 4%;
     }
 
     .nav-links {
-        flex-wrap: wrap;
-
-        justify-content: center;
-
-        gap: 12px;
+        gap: 12px 16px;
     }
 
-    header {
-        padding: 60px 20px;
-    }
-
-    header img {
-        width: 130px !important;
-        height: 130px !important;
-        max-width: 130px !important;
-        max-height: 130px !important;
-    }
-
-    header h1 {
-        font-size: 35px;
-    }
-
-    header > p {
-        font-size: 17px;
+    .nav-links a {
+        font-size: 13px;
     }
 
     section {
-        margin: 20px 10px;
-
-        padding: 25px;
+        max-width: 100%;
     }
 
-    h2 {
-        font-size: 24px;
-    }
 }
 
 
 /* =========================
-   REDUCED MOTION
+   RESPONSIVE DESIGN
+   MOBILE PHONES
 ========================= */
 
+@media screen and (max-width: 600px) {
+
+    nav {
+        padding: 15px 12px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-links {
+        gap: 10px 13px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .home {
+        padding: 60px 15px;
+    }
+
+    .profile img {
+        width: 125px;
+        height: 125px;
+    }
+
+    .home h1 {
+        font-size: 32px;
+    }
+
+    .home h2 {
+        font-size: 18px;
+    }
+
+    .motto {
+        font-size: 15px;
+    }
+
+    main {
+        padding: 15px 10px;
+    }
+
+    section {
+        margin: 22px auto;
+        padding: 23px 18px;
+        border-radius: 15px;
+    }
+
+    section h2 {
+        font-size: 23px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .info-list {
+        padding: 15px;
+    }
+
+    .info-list p {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    footer {
+        padding: 20px 10px;
+    }
+
+}
+
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+a:focus-visible {
+    outline: 3px solid #8E6BB2;
+    outline-offset: 4px;
+}
+
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
+
 }
